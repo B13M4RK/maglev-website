@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu-button {
+            background-color: black;
+            color: white;
+        }
+
+        .submenu-button {
+            background-color: gray;
+            color: white;
+        }
+
+        #menu-list {
+            list-style-type: none;
+            display: none;
+        }
+
+        .submenu-list {
+            list-style-type: none;
+            display: none;
+        }
+
+
+
+        #menu-list.open {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submenu-list.open {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="menu-button">open menu</button>
+        <ul id="menu-list">
+            <li>
+                <button class="submenu-button" id="submenu-button-1">open submenu</button>
+                <ul class="submenu-list" id="submenu-list-1">
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </li>
+            <li>
+                <button class="submenu-button" id="submenu-button-2">open submenu</button>
+                <ul class="submenu-list" id="submenu-list-2">
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const menuList = document.getElementById("menu-list");
+
+        menuButton.addEventListener("click", () => {
+            menuList.classList.toggle("open");
+        });
+
+        const submenuButton1 = document.getElementById("submenu-button-1");
+        const submenuList1 = document.getElementById("submenu-list-1");
+
+        submenuButton1.addEventListener("click", () => {
+            submenuList1.classList.toggle("open");
+        });
+
+        const submenuButton2 = document.getElementById("submenu-button-2");
+        const submenuList2 = document.getElementById("submenu-list-2");
+
+        submenuButton2.addEventListener("click", () => {
+            submenuList2.classList.toggle("open");
+        });
+
+    </script>
+</body>
+
+</html>
