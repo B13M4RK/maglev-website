@@ -274,6 +274,7 @@ body {
 .learn-more-btn {
     margin-top: 30px;
     width: fit-content;
+    margin-bottom: 30px;
 }
 
 .learn-more-btn a {
